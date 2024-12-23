@@ -1,13 +1,18 @@
 package Models;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class School {
-    private List<Person> members;
+    private ArrayList<Person> members;
 
     public School() {
         members = new ArrayList<>();
+    }
+
+    public void sort() {
+        Collections.sort(members);
     }
 
     public void addMember(Person person) {

@@ -25,8 +25,8 @@ public class Student extends Person {
             return 0.0;
         }
         double gpa = 0;
-        for (int grade : grades) {
-            gpa += grade;
+        for (int i = 0; i < grades.size(); i++) {
+            gpa += grades.get(i);
         }
         gpa = 4 * ((gpa / grades.size()) / 100);
         return gpa;

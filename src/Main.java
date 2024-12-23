@@ -5,7 +5,6 @@ import Models.School;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -55,6 +54,8 @@ public class Main {
             school.addMember(teacher);
 
         }
+
+        school.sort();
 
         System.out.println(school);
     }

@@ -1,6 +1,6 @@
 package Models;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String name;
     private String surname;
     private int age;
@@ -11,6 +11,11 @@ public class Person {
         setSurname(surname);
         setAge(age);
         setGender(gender);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return surname.compareToIgnoreCase(o.surname);
     }
 
     public String getGenderString() {
